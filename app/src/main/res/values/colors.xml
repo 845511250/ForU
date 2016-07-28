@@ -12,4 +12,11 @@
     <color name="blue">#FF375BF1</color>
     <color name="yellow">#FFF7D23E</color>
     <color name="green">#FF34A350</color>
+
+    <color name="myred">#c93437</color>
+    <color name="mygreen">#34a350</color>
+    <color name="myyellow">#f7d23e</color>
+    <color name="myblue">#375bf1</color>
+    <color name="mgray">#777</color>
+    <color name="mblack">#000</color>
 </resources>

@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.zuoyun.foru.WelcomeActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.forudesigns.foru.WelcomeActivity">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
@@ -16,5 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="20dp"
+        app:ci_drawable="@color/mblack"
+        app:ci_drawable_unselected="@color/mgray"/>
 </RelativeLayout>

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="#fff">
 
-    <com.zuoyun.foru.tools.MyWebView
+    <com.forudesigns.foru.tools.MyWebView
         android:id="@+id/wv_facebook"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

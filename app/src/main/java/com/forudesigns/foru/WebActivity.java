@@ -8,13 +8,16 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.media.audiofx.BassBoost;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Message;
 import android.os.Parcelable;
+import android.provider.ContactsContract;
 import android.provider.MediaStore;
+import android.provider.Settings;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -31,6 +34,8 @@ import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.facebook.appevents.AppEventsConstants;
+import com.facebook.appevents.AppEventsLogger;
 import com.forudesigns.foru.tools.SmallImage;
 import com.zuoyun.foru.R;
 
@@ -64,6 +69,7 @@ public class WebActivity extends MyBaseActivity {
 		setContentView(R.layout.activity_web);
 		context = this;
 
+		initfacebook();
 		initview();
 		initWebView(wv);
 		wv.loadUrl("https://m.forudesigns.com");
@@ -80,6 +86,10 @@ public class WebActivity extends MyBaseActivity {
 	}
 	//-------------------------------------------------------------onCreate finished here.
 
+	public void initfacebook(){
+		AppEventsLogger logger = AppEventsLogger.newLogger(this);
+		logger.logEvent(AppEventsConstants.EVENT_NAME_ACTIVATED_APP);
+	}
 	public void initview(){
 		WindowManager windowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
 		windowWidth = windowManager.getDefaultDisplay().getWidth();Log.e("windowWidth", windowWidth + "");

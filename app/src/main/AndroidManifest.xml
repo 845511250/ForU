@@ -10,11 +10,15 @@
     <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
 
     <application
+        android:name="com.forudesigns.foru.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="1763850413898724"/>
+
         <activity android:name="com.forudesigns.foru.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

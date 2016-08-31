@@ -14,7 +14,7 @@ public class SmallImage {
 	
 	public SmallImage(String imagepath,Context context) {
 		try {
-			int size=600;
+			int size=1000;
 
 			BitmapFactory.Options option = new BitmapFactory.Options();
 			option.inJustDecodeBounds = true;// 不读入内存，至获取长宽

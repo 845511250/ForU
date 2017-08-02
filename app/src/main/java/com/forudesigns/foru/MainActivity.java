@@ -8,6 +8,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
 import com.zuoyun.foru.R;
 
 public class MainActivity extends MyBaseActivity {
@@ -22,6 +24,9 @@ public class MainActivity extends MyBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_layout);
         context = this;
+
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
 
         startAppAnim();
     }
